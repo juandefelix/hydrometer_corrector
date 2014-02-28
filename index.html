@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hydrometer Corrections</title>
+  <meta name="description" content="Description of your site goes here">
+  <meta name="keywords" content="keyword1, keyword2, keyword3">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+  <body>
+    <div class="container">
+      <div class="inner_container">
+        <h1>Hydrometer Correction</h1>
+        <small>(The correction assumes that the hydrometer gives an accurate reading at 60º F)</small>
+        <br><br>
+        <form class>
+          <label>Specific gravity from your hydrometer:
+            <input type="textarea" name="og" placeholder="Measured Gravity">
+          </label>
+          <br><br>
+
+          <label> Temperature of your liquid:
+            <input type="textarea" name="temp" placeholder="Temperature in ºF">
+          </label>
+          <br><br>
+          <input class="button" type="submit" value="Calculate!">
+        </form>
+
+        <br>
+        <h4 class="result"></h4>
+
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+
+  function isInt(n) {
+   parsed = parseFloat(n)
+   return typeof parsed === 'number' && parsed > 0;
+}
+
+  $(document).ready(function(){
+    var result = $(".result");
+    result.hide();
+    $("form").submit(function(event){
+      event.preventDefault();
+      // console.log("READY!");
+      result.hide();
+      var value = $('[name="og"]').val();
+
+      if(isInt(value) === true){
+        console.log("TRUE!!");
+        result.text("Adjusted Specific Gravity: " + value)
+        result.show();
+      };
+      
+
+    });
+  });
+</script>

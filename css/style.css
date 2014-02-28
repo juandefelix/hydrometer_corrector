@@ -1,0 +1,38 @@
+.container {
+	margin: 0 auto;
+	border: 1px solid black;
+	border-radius: 3px;
+	width: 75%;
+
+	font-family: HelveticaNeue-Light, sans-serif;
+}
+
+.inner_container {
+	margin: 30px;
+}
+
+.result {
+	text-decoration: underline;
+/*	border:/* 1px solid #4C0000;
+	border-radius: 3px;
+	background-color:	#FF6666;
+	padding: 10px;
+	width: 20%;*/
+}
+
+.button {
+	border: 1px solid #808080;
+	border-radius: 5px;
+	background-color:	#CCCCCC;
+	padding: 7px;
+	width: 100px;
+}
+
+.button:hover {
+	padding: 7px;
+	width: 100px;
+
+	border: 1px solid #808080;
+	border-radius: 5px;
+	background-color:	#808080;
+}
