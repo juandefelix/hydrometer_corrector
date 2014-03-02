@@ -2,7 +2,10 @@
 
 ##### In progress  
 
-The program displays a form asking for specific gravity and temperature. After clicking on the button, the corrected value will show i the screen.
+The program displays a form asking for specific gravity and temperature. After clicking on the button, the corrected value will show in the screen.
 
 
-*Progress:* The form is displayed. Javascript will display the value of the s.g. only if is a number. The application is not making any calculations yet.
+**Progress:** 
+- The form is displayed.  
+- Wrote a method that makes calculations and returns the adjusted o.g. based on the temperature.  
+- The application needs to convert the string values in the fields to numbers, so the function above can work.

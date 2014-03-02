@@ -37,6 +37,36 @@
 
 <script>
 
+  function sgCorrection(og, temp){
+    switch (true){
+      case temp >= 50 && temp < 60:
+        return og -= 0.0005;
+        break;
+      case temp >= 60 && temp < 70:
+        break;
+      case temp >= 70 && temp < 77:
+        og += 0.001;
+        break;
+      case temp >= 77 && temp <84:
+        og += 0.002;
+        break;
+      case temp >= 84 && temp <95:
+        og += 0.003
+        break;
+      case temp >= 95 && temp < 105:
+        og += 0.005;
+        break;
+      case temp === 105:
+        og += 0.007;
+        break;
+      default:
+        return "Temperature must be in the range between 50ºF and 105ºF";
+    }
+    round = Math.round(og * 1000) / 1000;
+    return round.toFixed(3);
+  }
+
+
   function isInt(n) {
    parsed = parseFloat(n)
    return typeof parsed === 'number' && parsed > 0;
@@ -49,11 +79,12 @@
       event.preventDefault();
       // console.log("READY!");
       result.hide();
-      var value = $('[name="og"]').val();
+      og = $('[name="og"]').val();
+      temp = $('[name="temp"]').val();
 
-      if(isInt(value) === true){
-        console.log("TRUE!!");
-        result.text("Adjusted Specific Gravity: " + value)
+      if(isInt(og)){
+        console.log(og, typeof(og), temp, typeof(temp));
+        result.text("Adjusted Specific Gravity: " + sgCorrection(og, temp))
         result.show();
       };
       
