@@ -11,4 +11,4 @@ The program displays a form asking for specific gravity and temperature. After c
 - The application converts the string values in the fields to numbers and displays an error if not.
 
 
-Needs to refactor the use input validation
+Needs to refactor the user input validation
