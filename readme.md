@@ -8,4 +8,7 @@ The program displays a form asking for specific gravity and temperature. After c
 **Progress:** 
 - The form is displayed.  
 - Wrote a method that makes calculations and returns the adjusted o.g. based on the temperature.  
-- The application needs to convert the string values in the fields to numbers, so the function above can work.
+- The application converts the string values in the fields to numbers and displays an error if not.
+
+
+Needs to refactor the use input validation
