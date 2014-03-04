@@ -1,14 +1,3 @@
-#### Specific Gravity Corrector for a Triple Scale Hydrometer. Useful tool in homebrewing
+#### Specific Gravity Corrector for a Triple Scale Hydrometer. Useful tool in homebrewing.
 
-##### In progress  
-
-The program displays a form asking for specific gravity and temperature. After clicking on the button, the corrected value will show in the screen.
-
-
-**Progress:** 
-- The form is displayed.  
-- Wrote a method that makes calculations and returns the adjusted o.g. based on the temperature.  
-- The application converts the string values in the fields to numbers and displays an error if not.
-
-
-Needs to refactor the user input validation
+This application displays a form asking for specific gravity of a liquid (measured by a hydrometer) and the temperature of the liquid. After clicking on the button, the corrected specific gravity value will display in the screen. If the input values are the wrong type or not in the right range an error message will display.
