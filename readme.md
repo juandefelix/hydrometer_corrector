@@ -9,6 +9,6 @@ Download the application folder typing in your terminal
 
   `git clone https://github.com/juandefelix/hydrometer_corrector.git`
 
-Inside the folder you will see the `index.html` file.
+  Inside the folder you will see the `index.html` file.
 
 - Open the `index.html` file in your browser. Then you'll see in the browser window the form, so you can enter the measured s.g and the temperature.
