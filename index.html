@@ -79,16 +79,22 @@
       event.preventDefault();
       // console.log("READY!");
       result.hide();
+
       og = $('[name="og"]').val();
       temp = $('[name="temp"]').val();
 
-      if(isInt(og)){
-        console.log(og, typeof(og), temp, typeof(temp));
-        result.text("Adjusted Specific Gravity: " + sgCorrection(og, temp))
-        result.show();
-      };
-      
+      og = parseFloat(og);
+      temp = parseFloat(temp);
 
+      if(isInt(og) && isInt(temp)){
+        console.log("In TRUE");
+        result.text("Adjusted Specific Gravity: " + sgCorrection(og, temp));
+        result.show();
+      }else{
+        console.log("In FALSE");
+        result.text("Your specific gravity and temp should be valid numbers");
+        result.show();
+      }
     });
   });
 </script>
